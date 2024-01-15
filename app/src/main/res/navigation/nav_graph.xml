@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.registerfirebasebinding.fragments.ListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/list_to_profile"
+            app:destination="@id/ProfileNav" />
+
+        <action
+            android:id="@+id/list_to_details"
+            app:destination="@id/detailsFragment" />
+
+        <action
+            android:id="@+id/list_to_chat"
+            app:destination="@id/ChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProfileNav"
+        android:name="com.example.registerfirebasebinding.fragments.ProfileFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_profile">
+
+        <argument
+            android:name="uidUser"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/profile_to_list"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.registerfirebasebinding.fragments.DetailsFragment"
+        android:label="details"
+        tools:layout="@layout/fragment_details">
+
+        <action
+            android:id="@+id/list_to_details"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChatFragment"
+        android:name="com.example.registerfirebasebinding.fragments.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/chat_to_list"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/chat_to_profile"
+            app:destination="@id/ProfileNav" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/NewsFragment"
+        android:name="com.example.registerfirebasebinding.fragments.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news">
+
+
+    </fragment>
+
+</navigation>

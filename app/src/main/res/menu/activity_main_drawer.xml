@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/FirstFragment"
+            android:icon="@drawable/ic_baseline_menu_24"
+            android:title="menu"/>
+
+        <item
+            android:id="@+id/ProfileNav"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Profile"/>
+
+        <item
+            android:id="@+id/ChatFragment"
+            android:icon="@drawable/ic_baseline_chat_24"
+            android:title="chat"/>
+
+
+    </group>
+
+</menu>

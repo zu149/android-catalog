@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.registerfirebasebinding">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/apps"
+        android:label="@string/label"
+        android:roundIcon="@drawable/apps"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Registerfirebasebinding"
+        tools:targetApi="31">
+        <activity
+            android:name=".ZastavkaActivity"
+            android:theme="@style/NoActionBar"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoActionBar"
+            android:exported="false"
+            android:label="@string/app_name">
+
+
+
+        </activity>
+        <activity
+            android:name=".GlideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:theme="@style/NoActionBar"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
